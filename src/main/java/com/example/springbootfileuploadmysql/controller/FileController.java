@@ -48,7 +48,7 @@ public class FileController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("/downloadFile/{fileName:.+}")
+    @GetMapping("/downloadFile/{fileId}")
     public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
         // Load file as Resource
         DBfile dBfile = dbFileStorageService.getFile(fileId);
